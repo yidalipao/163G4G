@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="usermanager" namespace="/user" extends="struts-default">
+
+		<action name="add" class="com.perfact.t05.action.UserAction"
+			method="addUser">
+			<result name="tolist" type="redirectAction">allUser</result>
+		</action>
+
+		<action name="allUser" class="com.perfact.t05.action.UserAction"
+			method="allUser">
+			<result name="list">/jsp/addUser.jsp</result>
+		</action>
+
+		<action name="delete" class="com.perfact.t05.action.UserAction"
+			method="delete">
+			<result name="tolist" type="redirectAction">allUser</result>
+		</action>
+
+		<action name="getUpdate" class="com.perfact.t05.action.UserAction"
+			method="getUpdate">
+			<result name="update">/jsp/updateUser.jsp</result>
+		</action>
+
+		<action name="update" class="com.perfact.t05.action.UserAction"
+			method="update">
+			<result name="tolist" type="redirectAction">allUser</result>
+		</action>
+
+	</package>
+
+</struts>
